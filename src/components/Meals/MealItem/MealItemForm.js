@@ -10,8 +10,8 @@ const MealItemForm = (props) => {
   const addItemsToCart = (event) =>{
     event.preventDefault();
 
-    const quantity = document.getElementById('amount_' + props.id).value;
-    cartCntxt.addItem({...props.item, quantity: quantity});
+    const amountValue = document.getElementById('amount_' + props.id).value;
+    cartCntxt.addItem({...props.item, totalAmount: amountValue});
 
   }
   return (
